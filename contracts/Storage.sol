@@ -47,4 +47,8 @@ contract Storage {
         Bid memory bid = bids[id];
         return (bid.price, bid.provider, bid.ipfs_id, bid.approval);
     }
+
+    function getBidSize() public view returns(uint) {
+        return bids.length;
+    }
 }
