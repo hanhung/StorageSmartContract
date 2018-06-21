@@ -33,9 +33,9 @@ contract Storage {
     function approveBid(uint id) public {
         Bid storage bid = bids[id];
         require(manager == msg.sender);
-        require(address(this).balance >= bid.price);
+        //require(address(this).balance >= bid.price);
 
-        bid.provider.transfer(bid.price);
+        //bid.provider.transfer(bid.price);
         bid.approval = true;
     }
 
